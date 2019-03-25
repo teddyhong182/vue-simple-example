@@ -20,7 +20,7 @@
       },
       addTodo() {
         if (this.newTodoItem !== "") {
-          let value = this.newTodoItem && thos.newTodoItem.trim();
+          let value = this.newTodoItem && this.newTodoItem.trim();
           localStorage.setItem(value, value);
           this.clearInput();
         }
