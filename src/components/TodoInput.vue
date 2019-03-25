@@ -15,16 +15,17 @@
       }
     },
     methods: {
-      clearInput: function () {
-        this.newTodoItem = '';
-      },
       addTodo() {
         if (this.newTodoItem !== "") {
           let value = this.newTodoItem && this.newTodoItem.trim();
-          localStorage.setItem(value, value);
+          this.$emit('addTodo', value);
           this.clearInput();
         }
+      },
+      clearInput: function () {
+        this.newTodoItem = '';
       }
+
     }
   }
 </script>
